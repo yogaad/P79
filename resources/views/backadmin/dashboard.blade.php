@@ -1,0 +1,1 @@
+@extends('backadmin.layouts.master')

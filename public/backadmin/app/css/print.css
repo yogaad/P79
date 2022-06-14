@@ -1,0 +1,40 @@
+.pr-base {
+    font-size: 12px;
+}
+.pr-brand {
+    display: flex;
+}
+.pr-code {
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1px solid black;
+    padding: .5rem 1rem;
+    text-align: right;
+}
+.pr-general-info h6 {
+    font-weight: bolder;
+    font-size: .85rem;
+}
+.pr-note {
+    font-style: italic;
+    font-size: .875rem;
+}
+.pr-table-col-no {
+    width: 60px;
+    text-align: center;
+}
+.pr-table-col-qty {
+    width: 100px;
+}
+
+.table:not(.table-dark):not(.table-light) thead:not(.thead-dark) th, 
+.table:not(.table-dark):not(.table-light) tfoot:not(.thead-dark) th {
+    background: none;
+}
+.table tbody tr:last-child td {
+    border-bottom: 2px solid #EBE9F1;
+}
+
+.page-break {
+    page-break-after: always;
+}

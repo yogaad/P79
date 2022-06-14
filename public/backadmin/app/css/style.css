@@ -1,0 +1,206 @@
+
+/* Timeline */
+.pr-timeline {
+    font-size: 0.875rem;
+    color: var(--primary);
+}
+.pr-timeline-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.pr-timeline-item:not(:first-child)::before {
+    content: "";
+    width: 3px;
+    height: 150%;
+    position: absolute;
+    top: -100%;
+    left: 14rem;
+    transform: translate(-50%, 0);
+    background-color: var(--primary);
+}
+.pr-timeline-date,
+.pr-timeline-msg {
+    position: relative;
+    padding: 0.75rem 1rem;
+    background: #DEDBFB ;
+    border-radius: 5px;
+}
+.pr-timeline-date {
+    margin-right: 4rem;
+    width: 12rem;
+    text-align: center;
+}
+.pr-timeline-date::after {
+    content: "";
+    position: absolute;
+    right: -2rem;
+    top: 50%;
+    background: hsl(0, 0%, 100%);
+    border: 3px solid var(--primary);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+    z-index: 10;
+}
+.pr-timeline-item:first-child .pr-timeline-date::after {
+    background: var(--primary);
+    box-shadow: 1px 1px 10px var(--primary);
+}
+.pr-timeline-date::before,
+.pr-timeline-msg::before {
+    content: "";
+    display: block;
+    background: #DEDBFB ;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    transform-origin: center;
+}
+.pr-timeline-date::before {
+    right: 0;
+    transform: translate(50%,-50%) rotate(-45deg);
+    
+}
+.pr-timeline-msg::before {
+    left: 0;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    
+}
+.pr-form-additional {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+/* Table */
+.pr-table-col-action-1 {
+    width: 6rem !important;
+    text-align: center;
+}
+.pr-table-col-action-2 {
+    width: 9rem !important;
+    text-align: center;
+}
+.pr-table-col-status {
+    width: 9rem !important;
+    text-align: center;
+}
+.pr-table-col-subtotal {
+    width: 16rem !important;
+    text-align: right;
+}
+.pr-table-col-radio {
+    width: 5rem !important;
+}
+/* .pr-table-responsive {
+    width: 100%;
+    position: relative;
+    overflow-x: scroll;
+} */
+.pr-table-responsive td,
+.pr-table-responsive th {
+    white-space: nowrap;
+}
+
+/* Datatable */
+.dataTables_length .custom-select.form-control {
+    margin: 0;
+}
+
+/* Step */
+.stepper-wrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+  
+  .stepper-item::before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: -50%;
+    z-index: 2;
+  }
+  
+  .stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 2;
+  }
+  
+  .stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    margin-bottom: 6px;
+    border: 1px solid grey;
+  }
+  .active .step-counter{
+      border: 2px solid #0F75BC;
+  }
+  
+  .stepper-item.active {
+    font-weight: bold;
+  }
+  
+  .stepper-item.completed .step-counter {
+    background:#0F75BC;
+    color: white;
+  
+  }
+  
+  .stepper-item.completed::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #0F75BC;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 3;
+  }
+  
+  .stepper-item:first-child::before {
+    content: none;
+  }
+  .stepper-item:last-child::after {
+    content: none;
+  }
+  .pr-form-additional {
+      border: 1px solid rgba(0,0,0,0.2);
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+  }
+  .dataTables_length .custom-select.form-control {
+    margin: 0;
+}
+.form-label.required::after {
+  content: "*";
+  color: var(--danger);
+  margin-left: .25rem;
+}
