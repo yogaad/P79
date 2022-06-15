@@ -24,13 +24,14 @@ class ReportController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Transaction::query()->with('account')->orderBy('created_at','desc');
-
+            $data = Transaction::query()->orderBy('created_at','desc');
+            // dd($data);
             if ($request->has('account_filter') && $request->account_filter != 'all') {
-                $data->where('accountId', $request->account_filter);
+                $data->where('accountId', '=', $request->account_filter);
+                // dd($data);
             }
-
-            if ($request->has('startDate') && $request->has('endDate') && $request->startDate != 'all' && $request->endDate != 'all' ) {
+            // dd($request->startDate);
+            if (($request->has('startDate') && $request->has('endDate') ) && ($request->startDate != 'all' && $request->endDate != 'all'  ) && ($request->startDate != null && $request->endDate != null) ) {
                 $data->where('transactionDate', '>=', $request->startDate )
                 ->where('transactionDate', '<=',  $request->endDate  ) ;
             }
